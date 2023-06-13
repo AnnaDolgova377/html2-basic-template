@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="viewport" content="width=device-width, sinitial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page__body">
+  <header class="header">
+    <div class="header__wrapper">
+      <a class="header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/header-logo-desktop.svg" width="170" height="36">
+          <source media="(min-width: 768px)" srcset="img/header-logo-tablet.svg" width="82" height="36">
+          <img src="img/header-logo-mobail.svg" width="32" height="36"
+            alt="Логотип интернет-магазина кофейных напитков.">
+        </picture>
+      </a>
+      <!-- модификатор navigation--opened для открытого состояния
+          модификатор navigation--nojs для состояния без js -->
+          <nav class="header__navigation navigation navigation--closed navigation--nojs">
+            <button class="navigation__toggle" type="button">
+              <span class="visually-hidden"> Открыть меню.</span>
+            </button>
+            <div class="navigation__wrapper">
+              <ul class="navigation__list user-list">
+                  <a class="user-list__login" href="login.html">
+                    <svg class="user-list__login-icon" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#icon-login"></use>
+                    </svg>
+                  </a>
+                  <a class="user-list__basket" href="basket.html">
+                    <svg class="user-list__basket-icon" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#icon-basket"></use>
+                    </svg>
+                  </a>
+              </ul>
+              <ul class="navigation__list site-list">
+                <li class="site-list__item">
+                  <a class="site-list__link site-list__link--index site-list__link--current">главная</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link site-list__link--index" href="catalog.html">каталог</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link site-list__link--index" href="delivery.html">доставка</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link site-list__link--index" href="about.html">о нас</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+  </header>
+
+  <script src="./js/script.js" defer></script>
+</body>
+
+</html>
