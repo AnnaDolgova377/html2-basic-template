@@ -1,0 +1,15 @@
+@use "../global/bootstrap.scss";
+
+.user-list__link {
+  @include bootstrap.link(bootstrap.$base-black, bootstrap.$base-white);
+  @include bootstrap.offset-sides-y(21px, 21px);
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$medium;
+  font-size: 12px;
+  line-height: 1.6;
+  color: bootstrap.$base-black;
+  text-transform: uppercase;
+}

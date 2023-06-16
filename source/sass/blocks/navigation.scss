@@ -1,0 +1,100 @@
+@use "../global/bootstrap.scss";
+
+.navigation {
+  position: relative;
+
+  &--closed {
+    .navigation__toggle::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 2px;
+      background-color: bootstrap.$base-black;
+      right: 22px;
+      top: 22px;
+      box-shadow: 0 6px 0 0 bootstrap.$base-black,
+        0 12px 0 0 bootstrap.$base-black;
+    }
+
+    @media (max-width: bootstrap.$mobail-width-only) {
+      .site-list__item {
+        display: none;
+      }
+    }
+  }
+
+    &--opened {
+      .navigation__toggle::before,
+      .navigation__toggle::after {
+        content: "";
+        position: absolute;
+        right: 22px;
+        top: 22px;
+        width: 16px;
+        height: 2px;
+        background-color: bootstrap.$base-black;
+      }
+
+      .navigation__toggle::before {
+        transform: rotate(45deg);
+      }
+
+      .navigation__toggle::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &--nojs {
+      @media (max-width: bootstrap.$mobail-width-only) {
+        .navigation__toggle {
+          display: none;
+        }
+
+        .site-list__item {
+          position: relative;
+          display: block;
+        }
+      }
+    }
+  }
+
+.navigation__toggle {
+  position: absolute;
+  top: -60px;
+  right: -20px;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  background-color: bootstrap.$base-white;
+  border: none;
+  z-index: 2;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:active {
+    background-color: bootstrap.$base-secondary;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: none;
+  }
+}
+
+.navigation__site-list {
+  display: flex;
+  flex-direction: column;
+  @include bootstrap.list-reset;
+  text-align: center;
+  width: 100%;
+}
+
+.navigation__user-list {
+  display: flex;
+  @include bootstrap.list-reset;
+
+  @media (max-width: bootstrap.$mobail-width-only) {
+    position: absolute;
+    top: -44px;
+    right: 40px;
+  }
+}

@@ -1,0 +1,39 @@
+@use "../global/bootstrap.scss";
+
+.site-list__link {
+  @include bootstrap.link(bootstrap.$base-black, bootstrap.$base-white);
+  @include bootstrap.offset-sides-y(21px, 21px);
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$medium;
+  font-size: 12px;
+  line-height: 1.6;
+  color: bootstrap.$base-black;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: bootstrap.$base-secondary;
+    content: "";
+  }
+
+  &:hover,
+  &:focus {
+    color: bootstrap.$base-primary;
+  }
+
+  &:active {
+    color: bootstrap.$base-black;
+    background-color: bootstrap.$base-secondary;
+  }
+}
+
+.site-list__item:last-child {
+  border-bottom: 1px solid bootstrap.$base-secondary;
+}

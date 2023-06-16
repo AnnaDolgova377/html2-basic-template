@@ -1,6 +1,5 @@
 let nav = document.querySelector('.navigation');
 let navToogle = document.querySelector('.navigation__toggle');
-let map = document.querySelector('.footer-address__wrapper-location');
 
 nav.classList.remove('navigation--nojs');
 
@@ -14,5 +13,16 @@ navToogle.addEventListener('click', function () {
   }
 });
 
-map.classList.remove('footer-address__wrapper-location--nojs');
+const swiper = new Swiper('.swiper__content', {
+  direction: 'horizontal',
+  loop: true,
 
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
