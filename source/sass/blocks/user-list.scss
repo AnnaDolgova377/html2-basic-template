@@ -17,18 +17,16 @@
   &:active {
     background-color: bootstrap.$base-secondary;
   }
-
 }
 
-.user-list__icon{
+.user-list__icon {
   padding: 22px;
 }
 
-.user-list__text{
+.user-list__text {
   display: none;
 
-  @media (min-width: bootstrap.$desktop-width){
+  @media (min-width: bootstrap.$desktop-width) {
     display: block;
   }
 }
-

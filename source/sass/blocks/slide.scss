@@ -1,14 +1,14 @@
 @use "../global/bootstrap.scss";
 
-.slide{
+.slide {
+  @include bootstrap.offset-sides-y(20px, 60px);
   margin: 0 auto;
   display: flex;
-
   flex-direction: column;
   text-align: center;
-  @include bootstrap.offset-sides-y(20px, 60px);
 }
-.slide__badge{
+
+.slide__badge {
   @include bootstrap.offset-sides-y(10px, 4px);
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$bold;
@@ -18,9 +18,9 @@
   text-transform: uppercase;
 }
 
-.slide__title{
-  margin: 0;
+.slide__title {
   @include bootstrap.offset-sides-x(20px, 20px);
+  margin: 0;
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$bold;
   font-size: 36px;
@@ -29,9 +29,9 @@
   padding-bottom: 10px;
 }
 
-.slide__description{
-  margin: 0;
+.slide__description {
   @include bootstrap.offset-sides-x(20px, 20px);
+  margin: 0;
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$regular;
   font-size: 14px;
@@ -40,13 +40,13 @@
   padding-bottom: 20px;
 }
 
-.slide__wrapper-buy{
+.slide__wrapper-buy {
+  @include bootstrap.offset-sides-x(20px, 20px);
   display: flex;
   justify-content: center;
-  @include bootstrap.offset-sides-x(20px, 20px);
 }
 
-.slide__del-price{
+.slide__del-price {
   margin-right: 6px;
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$regular;
@@ -55,7 +55,7 @@
   color: bootstrap.$base-primary;
 }
 
-.slide__price{
+.slide__price {
   margin: 0;
   margin-right: 20px;
   font-family: bootstrap.$base-family;
@@ -65,6 +65,6 @@
   color: bootstrap.$base-black;
 }
 
-.slide__link-buy{
+.slide__link-buy {
   width: 113px;
 }

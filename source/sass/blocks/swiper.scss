@@ -1,23 +1,23 @@
 @use "../global/bootstrap.scss";
 
-.swiper{
+.swiper {
   background-color: bootstrap.$flat-white;
 }
 
-.swiper-pagination{
+.swiper-pagination {
   display: none;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
   left: 0;
 }
 
-.swiper-button-next{
+.swiper-button-next {
   right: 0;
 }
 
 .swiper-button-prev::after,
-.swiper-button-next::after{
+.swiper-button-next::after {
   color: bootstrap.$base-primary;
   font-size: 20px;
 }

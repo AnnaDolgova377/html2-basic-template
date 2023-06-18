@@ -81,16 +81,17 @@
 }
 
 .navigation__site-list {
+  @include bootstrap.list-reset;
   display: flex;
   flex-direction: column;
-  @include bootstrap.list-reset;
   text-align: center;
   width: 100%;
 }
 
 .navigation__user-list {
-  display: flex;
   @include bootstrap.list-reset;
+  display: flex;
+
 
   @media (max-width: bootstrap.$mobail-width-only) {
     position: absolute;

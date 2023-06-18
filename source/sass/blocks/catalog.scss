@@ -1,0 +1,32 @@
+@use "../global/bootstrap.scss";
+
+.catalog{
+  background-color: bootstrap.$lightest-grey;
+}
+
+.catalog__wrapper{
+  @include bootstrap.offset-sides-y(50px, 44px);
+  margin: 0 auto;
+  width: 280px;
+}
+
+.catalog__badge {
+  padding-bottom: 4px;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$bold;
+  font-size: 12px;
+  line-height: 1.09;
+  color: bootstrap.$base-primary;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.catalog__title{
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$bold;
+  font-size: 24px;
+  line-height: 1.23;
+  color: bootstrap.$base-black;
+  text-align: center;
+  padding-bottom: 20px;
+}

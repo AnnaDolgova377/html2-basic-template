@@ -1,0 +1,85 @@
+@use "../global/bootstrap.scss";
+
+.range-price__scale {
+  position: relative;
+  height: 4px;
+  background-color: bootstrap.$light-grey;
+}
+
+.range-price__bar {
+  position: absolute;
+  width: 241px;
+  height: 4px;
+  background-color: bootstrap.$primary-lighter;
+}
+
+.range-price__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: bootstrap.$base-white;
+  border: 2px solid bootstrap.$primary-lighter;
+  cursor: pointer;
+
+  &::before{
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  // &:active::before{
+  //   background-color: red;
+  // }
+
+  &:hover::before,
+  &:focus::before{
+    background-color: bootstrap.$base-primary;
+    opacity: 0.25;
+  }
+
+  &:disabled{
+    border: 2px solid bootstrap.$base-grey;
+  }
+}
+
+.toggle-min {
+  top: -12px;
+}
+
+.toggle-max {
+  top: -12px;
+  right: -1px;
+}
+
+.range-price__wrapper-inputs {
+  @include bootstrap.offset-sides-y(34px, 30px);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+
+.range-price__input {
+  @include bootstrap.offset-sides-y(8px, 8px);
+  @include bootstrap.offset-sides-x(10px, 10px);
+  box-sizing: border-box;
+  width: 118px;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$medium;
+  font-size: 16px;
+  line-height: 1.23;
+  color: bootstrap.$base-black;
+  background-color: bootstrap.$base-white;
+  border: 2px solid bootstrap.$primary-lighter;
+  border-radius: 4px;
+
+  &::placeholder{
+    color: bootstrap.$base-grey;
+  }
+}
+

@@ -1,13 +1,13 @@
 @use "../global/bootstrap.scss";
 
-.features__wrapper{
+.features__wrapper {
+  @include bootstrap.offset-sides-y(50px, 60px);
   margin: 0 auto;
   width: 280px;
-  @include bootstrap.offset-sides-y(50px, 60px);
   text-align: center;
 }
 
-.features__badge{
+.features__badge {
   padding-bottom: 4px;
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$bold;
@@ -17,7 +17,7 @@
   text-transform: uppercase;
 }
 
-.features__title{
+.features__title {
   margin: 0;
   padding-bottom: 36px;
   font-family: bootstrap.$base-family;
@@ -27,17 +27,17 @@
   color: bootstrap.$base-black;
 }
 
-.features__list{
+.features__list {
+  @include bootstrap.list-reset;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  @include bootstrap.list-reset;
 }
 
-.feature__title{
+.feature__title {
+  @include bootstrap.offset-sides-y(66px, 4px);
   position: relative;
   margin: 0;
-  @include bootstrap.offset-sides-y(66px, 4px);
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$bold;
   font-size: 18px;
@@ -53,25 +53,25 @@
     height: 56px;
   }
 
-  &--speed::before{
+  &--speed::before {
     content: url("../../img/watch.svg");
   }
 
-  &--comfortable::before{
+  &--comfortable::before {
     content: url("../../img/glass.svg");
   }
 
-  &--active::before{
+  &--active::before {
     content: url("../../img/lightning.svg");
   }
 
-  &--eco::before{
+  &--eco::before {
     content: url("../../img/leaf.svg");
   }
 }
 
 
-.feature__description{
+.feature__description {
   margin: 0;
   font-family: inherit;
 }

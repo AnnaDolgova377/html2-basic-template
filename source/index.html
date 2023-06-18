@@ -84,7 +84,7 @@
             <img src="img/slides/slide-1-mobail.png" width="280" height="280"
               srcset="img/slides/slide-1-mobail@2x.png 2x" alt="Баночка кофе Декаф Флэт Уайт.">
           </picture>
-          <span class="slide__badge">Новинка!</span>
+          <div class="slide__badge">Новинка!</div>
           <h1 class="slide__title">Декаф Флэт Уайт</h1>
           <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком —
             то, что нужно для
@@ -111,7 +111,7 @@
             <img src="img/slides/slide-2-mobail.png" width="280" height="280"
               srcset="img/slides/slide-2-mobail@2x.png 2x" alt="Баночка кофе Лавандовый Латте.">
           </picture>
-          <span class="slide__badge">Новинка!</span>
+          <div class="slide__badge">Новинка!</div>
           <h1 class="slide__title">Лавандовый Латте</h1>
           <p class="slide__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
             лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
@@ -137,7 +137,7 @@
             <img src="img/slides/slide-3-mobail.png" width="280" height="280"
               srcset="img/slides/slide-3-mobail@2x.png 2x" alt="Баночка кофе Тройной Эспрессо.">
           </picture>
-          <span class="slide__badge">Новинка!</span>
+          <div class="slide__badge">Новинка!</div>
           <h1 class="slide__title">Тройной Эспрессо</h1>
           <p class="slide__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
             Колумбии покажет вам, что такое настоящая бодрость</p>
@@ -154,7 +154,7 @@
     </section>
     <section class="main-container__features features">
       <div class="features__wrapper">
-        <span class="features__badge">Преимущества</span>
+        <div class="features__badge">Преимущества</div>
         <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
         <ul class="features__list">
           <li class="features__item feature">
@@ -181,29 +181,29 @@
     <section class="main-container__catalog catalog">
       <div class="catalog__wrapper">
         <div class="catalog__filter">
-          <span class="catalog__badge">Каталог</span>
+          <div class="catalog__badge">Каталог</div>
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
           <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="form__filter-price filter-price">
               <legend class="form__title-price">Цена</legend>
               <div class="filter-price__range range-price">
-                <div class="range-price__wrapper-inputs">
-                  <label class="range-price__label range-price__label-min">
-                    <input class="range-price__input range-price__min" type="number" value="0" name="min-price">
-                  </label>
-                  <label class="range-price__label range-price__label-max">
-                    <input class="range-price__input range-price-max" type="number" value="123" name="max-price">
-                  </label>
-                </div>
                 <div class="range-price__scale">
                   <div class="range-price__bar">
                     <button class="range-price__toggle toggle-min" type="button">
                       <span class="visually-hidden">Указать минимальное значение стоимости.</span>
                     </button>
-                    <button class="range-price-toggle toggle-max" type="button">
+                    <button class="range-price__toggle toggle-max" type="button">
                       <span class="visually-hidden">Указать максимальное значение стоимости.</span>
                     </button>
                   </div>
+                </div>
+                <div class="range-price__wrapper-inputs">
+                  <label class="range-price__label range-price__label-min">
+                    <input class="range-price__input range-price__min" type="number" placeholder="0" name="min-price">
+                  </label>
+                  <label class="range-price__label range-price__label-max">
+                    <input class="range-price__input range-price-max" type="number" value="123" name="max-price">
+                  </label>
                 </div>
               </div>
             </fieldset>
