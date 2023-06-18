@@ -23,40 +23,40 @@
     }
   }
 
-    &--opened {
-      .navigation__toggle::before,
-      .navigation__toggle::after {
-        content: "";
-        position: absolute;
-        right: 22px;
-        top: 22px;
-        width: 16px;
-        height: 2px;
-        background-color: bootstrap.$base-black;
-      }
-
-      .navigation__toggle::before {
-        transform: rotate(45deg);
-      }
-
-      .navigation__toggle::after {
-        transform: rotate(-45deg);
-      }
+  &--opened {
+    .navigation__toggle::before,
+    .navigation__toggle::after {
+      content: "";
+      position: absolute;
+      right: 22px;
+      top: 30px;
+      width: 16px;
+      height: 2px;
+      background-color: bootstrap.$base-black;
     }
 
-    &--nojs {
-      @media (max-width: bootstrap.$mobail-width-only) {
-        .navigation__toggle {
-          display: none;
-        }
+    .navigation__toggle::before {
+      transform: rotate(45deg);
+    }
 
-        .site-list__item {
-          position: relative;
-          display: block;
-        }
+    .navigation__toggle::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--nojs {
+    @media (max-width: bootstrap.$mobail-width-only) {
+      .navigation__toggle {
+        display: none;
+      }
+
+      .site-list__item {
+        position: relative;
+        display: block;
       }
     }
   }
+}
 
 .navigation__toggle {
   position: absolute;
@@ -94,7 +94,7 @@
 
   @media (max-width: bootstrap.$mobail-width-only) {
     position: absolute;
-    top: -44px;
+    top: -60px;
     right: 40px;
   }
 }

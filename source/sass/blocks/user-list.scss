@@ -2,8 +2,9 @@
 
 .user-list__link {
   @include bootstrap.link(bootstrap.$base-black, bootstrap.$base-white);
-  @include bootstrap.offset-sides-y(21px, 21px);
   position: relative;
+  width: 60px;
+  height: 60px;
   box-sizing: border-box;
   display: block;
   font-family: bootstrap.$base-family;
@@ -12,4 +13,22 @@
   line-height: 1.6;
   color: bootstrap.$base-black;
   text-transform: uppercase;
+
+  &:active {
+    background-color: bootstrap.$base-secondary;
+  }
+
 }
+
+.user-list__icon{
+  padding: 22px;
+}
+
+.user-list__text{
+  display: none;
+
+  @media (min-width: bootstrap.$desktop-width){
+    display: block;
+  }
+}
+

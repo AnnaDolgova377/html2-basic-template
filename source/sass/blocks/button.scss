@@ -1,0 +1,16 @@
+@use "../global/bootstrap.scss";
+
+.button {
+  @include bootstrap.offset-sides-y(8px, 8px);
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$regular;
+  font-size: 16px;
+  line-height: 1.23;
+  color: bootstrap.$base-white;
+  background-color: bootstrap.$base-primary;
+  border: none;
+  border-radius: 4px;
+}

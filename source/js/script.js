@@ -13,12 +13,13 @@ navToogle.addEventListener('click', function () {
   }
 });
 
-const swiper = new Swiper('.swiper__content', {
+const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 
   navigation: {

@@ -1,0 +1,70 @@
+@use "../global/bootstrap.scss";
+
+.slide{
+  margin: 0 auto;
+  display: flex;
+
+  flex-direction: column;
+  text-align: center;
+  @include bootstrap.offset-sides-y(20px, 60px);
+}
+.slide__badge{
+  @include bootstrap.offset-sides-y(10px, 4px);
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$bold;
+  font-size: 12px;
+  line-height: 1.09;
+  color: bootstrap.$base-primary;
+  text-transform: uppercase;
+}
+
+.slide__title{
+  margin: 0;
+  @include bootstrap.offset-sides-x(20px, 20px);
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$bold;
+  font-size: 36px;
+  line-height: 1.09;
+  color: bootstrap.$base-black;
+  padding-bottom: 10px;
+}
+
+.slide__description{
+  margin: 0;
+  @include bootstrap.offset-sides-x(20px, 20px);
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$regular;
+  font-size: 14px;
+  line-height: 1.17;
+  color: bootstrap.$base-black;
+  padding-bottom: 20px;
+}
+
+.slide__wrapper-buy{
+  display: flex;
+  justify-content: center;
+  @include bootstrap.offset-sides-x(20px, 20px);
+}
+
+.slide__del-price{
+  margin-right: 6px;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$regular;
+  font-size: 16px;
+  line-height: 1.64;
+  color: bootstrap.$base-primary;
+}
+
+.slide__price{
+  margin: 0;
+  margin-right: 20px;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$semi-bold;
+  font-size: 20px;
+  line-height: 1.31;
+  color: bootstrap.$base-black;
+}
+
+.slide__link-buy{
+  width: 113px;
+}
