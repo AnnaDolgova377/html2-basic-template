@@ -1,12 +1,16 @@
 @use "../global/bootstrap.scss";
 
-.form__filter-price{
+.form__filter-price,
+.form__filter-milk,
+.form__filter-country {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.form__title-price{
+.form__title-price,
+.form__title-milk,
+.form__title-country {
   padding: 0;
   padding-bottom: 20px;
   font-family: bootstrap.$base-family;

@@ -2,8 +2,9 @@
 
 .range-price__scale {
   position: relative;
-  height: 4px;
+  height: 2px;
   background-color: bootstrap.$light-grey;
+  margin-top: 10px;
 }
 
 .range-price__bar {
@@ -30,28 +31,32 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
+    background-color: bootstrap.$base-white;
   }
-
-  // &:active::before{
-  //   background-color: red;
-  // }
 
   &:hover::before,
   &:focus::before{
-    background-color: bootstrap.$base-primary;
-    opacity: 0.25;
+    background-color: rgba(bootstrap.$base-primary, 0.25)
   }
 
-  &:disabled{
+  &:active::before{
+    background-color: bootstrap.$base-primary;
+  }
+
+  &:disabled {
     border: 2px solid bootstrap.$base-grey;
+  }
+
+  &:disabled+.range-price__bar{
+    background-color: bootstrap.$base-grey;
   }
 }
 
-.toggle-min {
+.range-price__toggle--min {
   top: -12px;
 }
 
-.toggle-max {
+.range-price__toggle--max {
   top: -12px;
   right: -1px;
 }
@@ -61,7 +66,6 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 44px;
 }
 
 .range-price__input {
@@ -69,17 +73,40 @@
   @include bootstrap.offset-sides-x(10px, 10px);
   box-sizing: border-box;
   width: 118px;
+  text-align: center;
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$medium;
   font-size: 16px;
   line-height: 1.23;
   color: bootstrap.$base-black;
   background-color: bootstrap.$base-white;
-  border: 2px solid bootstrap.$primary-lighter;
+  border: none;
+  outline: 2px solid bootstrap.$primary-lighter;
   border-radius: 4px;
 
-  &::placeholder{
+  &::placeholder {
     color: bootstrap.$base-grey;
+  }
+
+  &:focus {
+    outline: 2px solid bootstrap.$primary-darker;
+  }
+
+  &:disabled {
+    outline: 2px solid bootstrap.$light-grey;
   }
 }
 
+.range-price__label-min {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 2px;
+    background-color: bootstrap.$base-grey;
+    right: -25px;
+    bottom: 18px;
+  }
+}

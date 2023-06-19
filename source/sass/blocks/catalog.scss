@@ -30,3 +30,26 @@
   text-align: center;
   padding-bottom: 20px;
 }
+
+.catalog__submit-button{
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+.catalog__reset-button{
+  width: 280px;
+  background-color: bootstrap.$base-white;
+  color: bootstrap.$base-primary;
+  margin-bottom: 36px;
+
+  &:hover,
+  &:focus,
+  &:active{
+    color: bootstrap.$base-white;
+  }
+
+  &:disabled{
+    color: bootstrap.$base-white;
+    background-color: bootstrap.$light-grey;
+  }
+}

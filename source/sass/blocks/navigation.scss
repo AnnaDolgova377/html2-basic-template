@@ -2,6 +2,7 @@
 
 .navigation {
   position: relative;
+  margin: 0 auto;
 
   &--closed {
     .navigation__toggle::before {
@@ -10,7 +11,7 @@
       width: 16px;
       height: 2px;
       background-color: bootstrap.$base-black;
-      right: 22px;
+      right: 20px;
       top: 22px;
       box-shadow: 0 6px 0 0 bootstrap.$base-black,
         0 12px 0 0 bootstrap.$base-black;
@@ -28,7 +29,7 @@
     .navigation__toggle::after {
       content: "";
       position: absolute;
-      right: 22px;
+      right: 20px;
       top: 30px;
       width: 16px;
       height: 2px;
@@ -61,7 +62,7 @@
 .navigation__toggle {
   position: absolute;
   top: -60px;
-  right: -20px;
+  right: 0;
   padding: 0;
   width: 60px;
   height: 60px;
@@ -80,22 +81,36 @@
   }
 }
 
+.navigation__wrapper {
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 580px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .navigation__site-list {
   @include bootstrap.list-reset;
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 100%;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 400px;
+  }
 }
 
 .navigation__user-list {
   @include bootstrap.list-reset;
   display: flex;
 
-
   @media (max-width: bootstrap.$mobail-width-only) {
     position: absolute;
     top: -60px;
-    right: 40px;
+    right: 60px;
   }
 }

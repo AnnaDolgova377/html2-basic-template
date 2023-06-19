@@ -1,0 +1,43 @@
+@use "../global/bootstrap.scss";
+.footer-copyright{
+  position: relative;
+  padding: 20px;
+
+  &::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: bootstrap.$base-secondary;
+  }
+}
+
+.footer-copyright__wrapper{
+  margin: 0 auto;
+  width: 280px;
+}
+
+.footer-copyright__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover .footer-copyright__logo,
+  &:focus .footer-copyright__logo{
+    color: bootstrap.$base-primary;
+  }
+}
+
+.footer-copyright__text {
+  margin: 0;
+  padding-right: 4px;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$regular;
+  font-size: 12px;
+  line-height: 1.09;
+  color: bootstrap.$base-grey;
+}

@@ -1,0 +1,81 @@
+@use "../global/bootstrap.scss";
+
+
+.filter-country__list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding-bottom: 30px;
+}
+.filter-country__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.filter-country__group {
+  margin: 0;
+}
+
+.filter-country__label {
+  position: relative;
+  padding-left: 55px;
+  cursor: pointer;
+
+  &:hover .filter-country__mark,
+  &:focus .filter-country__mark{
+    background-color: rgba(bootstrap.$base-primary, 0.25);
+    border: 2px solid bootstrap.$primary-lighter;
+  }
+}
+
+.filter-country__mark {
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  width: 42px;
+  height: 24px;
+  background-color: bootstrap.$base-grey;
+  border: 2px solid bootstrap.$base-grey;
+  border-radius: 12px;
+  transition: background-color 0.25s ease;
+
+  &::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: bootstrap.$base-white;
+  }
+}
+
+.filter-country__mark-label {
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$regular;
+  font-size: 16px;
+  line-height: 1.23;
+  color: bootstrap.$base-black;
+}
+
+.filter-country__field:checked+.filter-country__mark {
+  border: 2px solid bootstrap.$base-primary;
+  background-color: bootstrap.$base-primary;
+
+  &::before {
+    left: 18px;
+  }
+}
+
+.filter-country__field:disabled+.filter-country__mark {
+  border: 2px solid bootstrap.$light-grey;
+  background-color: bootstrap.$light-grey;
+}
+
+.filter-country__field:disabled:checked+.filter-country__mark::before {
+  left: 18px;
+  background-color: bootstrap.$base-grey;
+}
+
+.filter-country__field:disabled~.filter-country__mark-label {
+  color: bootstrap.$base-grey;
+}

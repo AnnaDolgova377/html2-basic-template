@@ -1,19 +1,28 @@
 @use "../global/bootstrap.scss";
 
-.header__wrapper {
+.header{
+  @media (min-width: bootstrap.$tablet-width){
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    column-gap: 67px;
+    width: 728px;
+  }
+}
+
+.header__wrapper-logo {
   margin: 0 auto;
   width: 280px;
   display: flex;
   flex-direction: column;
 
-
   @media (min-width: bootstrap.$tablet-width) {
-    width: 728px;
+    width: 82px;
   }
 
-  @media (min-width: bootstrap.$desktop-width) {
-    width: 1360px;
-  }
+  // @media (min-width: bootstrap.$desktop-width) {
+  //   width: 1360px;
+  // }
 }
 
 .header__logo {

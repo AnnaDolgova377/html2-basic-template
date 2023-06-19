@@ -1,5 +1,9 @@
 @use "../global/bootstrap.scss";
 
+.site-list__item {
+  position: relative;
+}
+
 .site-list__link {
   @include bootstrap.link(bootstrap.$base-black, bootstrap.$base-white);
   @include bootstrap.offset-sides-y(21px, 21px);
@@ -9,7 +13,7 @@
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$medium;
   font-size: 12px;
-  line-height: 1.6;
+  line-height: 1.09;
   color: bootstrap.$base-black;
   text-transform: uppercase;
 
@@ -32,8 +36,36 @@
     color: bootstrap.$base-black;
     background-color: bootstrap.$base-secondary;
   }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(32px, 32px);
+    @include bootstrap.offset-sides-x(20px, 20px);
+
+    &::before {
+      display: none;
+    }
+
+    &--current {
+      position: relative;
+      color: bootstrap.$base-primary;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: bootstrap.$base-primary;
+        content: "";
+      }
+    }
+  }
 }
 
 .site-list__item:last-child {
   border-bottom: 1px solid bootstrap.$base-secondary;
+
+  @media (min-width: bootstrap.$tablet-width){
+    border-bottom: none;
+  }
 }

@@ -1,0 +1,48 @@
+@use "../global/bootstrap.scss";
+
+.footer-media{
+  position: relative;
+  padding: 20px;
+
+  &::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: bootstrap.$base-secondary;
+  }
+}
+
+.footer-media__wrapper{
+  margin: 0 auto;
+  width: 280px;
+}
+
+.footer-media__title{
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$bold;
+  font-size: 14px;
+  line-height: 1.17;
+  color: bootstrap.$base-primary;
+}
+
+.footer-media__list{
+  @include bootstrap.list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-media__link{
+  @include bootstrap.link(bootstrap.$base-black, bootstrap.$base-white);
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$medium;
+  font-size: 12px;
+  line-height: 1.09;
+  color: bootstrap.$base-black;
+  text-transform: uppercase;
+}

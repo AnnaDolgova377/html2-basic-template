@@ -1,0 +1,58 @@
+@use "../global/bootstrap.scss";
+
+.footer-contacts{
+  position: relative;
+  padding: 20px;
+
+  &::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: bootstrap.$base-secondary;
+  }
+}
+
+.footer-contacts__wrapper{
+  margin: 0 auto;
+  width: 280px;
+}
+
+.footer-contacts__title{
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$bold;
+  font-size: 14px;
+  line-height: 1.17;
+  color: bootstrap.$base-primary;
+}
+
+.footer-contacts__address-phone{
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  row-gap: 16px;
+}
+
+.footer-contacts__address-text{
+  margin: 0;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$regular;
+  font-size: 14px;
+  line-height: 1.17;
+  font-style: normal;
+  color: bootstrap.$base-black;
+  text-decoration: none
+}
+
+.footer-contacts__phone{
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$regular;
+  font-size: 14px;
+  line-height: 1.17;
+  font-style: normal;
+  color: bootstrap.$base-black;
+  text-decoration: none
+}

@@ -1,0 +1,9 @@
+@use "../global/bootstrap.scss";
+
+.footer__content{
+  @include bootstrap.offset-sides-y(20px, 20px);
+  margin: 0 auto;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}

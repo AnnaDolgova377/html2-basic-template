@@ -19,5 +19,17 @@
 .swiper-button-prev::after,
 .swiper-button-next::after {
   color: bootstrap.$base-primary;
-  font-size: 20px;
+  font-size: 11px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  &:hover::after,
+  &:focus::after{
+    color: bootstrap.$base-primary;
+  }
+
+  &:disabled::after {
+    color: bootstrap.$base-grey;
+  }
 }

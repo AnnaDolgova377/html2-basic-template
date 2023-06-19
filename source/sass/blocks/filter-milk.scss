@@ -1,0 +1,80 @@
+@use "../global/bootstrap.scss";
+
+.filter-milk__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding-bottom: 34px;
+}
+
+.filter-milk__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.filter-milk__group {
+  margin: 0;
+}
+
+.filter-milk__label {
+  position: relative;
+  padding-left: 34px;
+  cursor: pointer;
+
+  &:hover .filter-milk__mark,
+  &:focus .filter-milk__mark {
+    border: 2px solid bootstrap.$primary-lighter;
+
+    &::before {
+      background-color: rgba(bootstrap.$base-primary, 0.25)
+    }
+  }
+}
+
+.filter-milk__mark {
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  background-color: bootstrap.$base-white;
+  border-radius: 50%;
+  border: 2px solid bootstrap.$base-grey;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+}
+
+.filter-milk__mark-label {
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$regular;
+  font-size: 16px;
+  line-height: 1.23;
+  color: bootstrap.$base-black;
+}
+
+.filter-milk__field:checked+.filter-milk__mark {
+  border: 2px solid bootstrap.$primary-lighter;
+
+  &::before {
+    background-color: bootstrap.$primary-lighter;
+  }
+}
+
+.filter-milk__field:disabled+.filter-milk__mark {
+  border: 2px solid bootstrap.$light-grey;
+}
+
+.filter-milk__field:disabled:checked+.filter-milk__mark::before {
+  background-color: bootstrap.$light-grey;
+}
+
+.filter-milk__field:disabled~.filter-milk__mark-label {
+  color: bootstrap.$base-grey;
+}

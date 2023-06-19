@@ -1,0 +1,21 @@
+@use "../global/bootstrap.scss";
+
+.footer-social__list {
+  @include bootstrap.list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-social__item__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer-social__link {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-width: 40px;
+  min-height: 40px;
+}

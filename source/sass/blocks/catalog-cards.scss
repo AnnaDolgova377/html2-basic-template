@@ -1,0 +1,83 @@
+@use "../global/bootstrap.scss";
+
+.catalog-cards {
+  margin: 0 auto;
+  padding-bottom: 40px;
+  width: 280px;
+}
+
+.catalog-cards__list {
+  @include bootstrap.list-reset;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  background-color: bootstrap.$base-white;
+}
+
+.catalog-cards__item {
+  @include bootstrap.offset-sides-y(40px, 20px);
+  @include bootstrap.offset-sides-x(20px, 20px);
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-cards__wrapper-image{
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 24px;
+}
+
+.catalog-cards__link-img,
+.catalog-cards__link{
+  @include bootstrap.link(bootstrap.$base-black, bootstrap.$base-white);
+}
+
+.catalog-cards__title{
+  margin: 0;
+  margin-bottom: 4px;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$bold;
+  font-size: 18px;
+  line-height: 1.46;
+  color: bootstrap.$base-black;
+}
+
+.catalog-cards__description{
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: inherit;
+}
+
+.catalog-cards__buy{
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-cards__price{
+  margin: 0;
+  font-family: bootstrap.$base-family;
+  font-weight: bootstrap.$semi-bold;
+  font-size: 20px;
+  line-height: 1.31;
+  color: bootstrap.$base-black;
+}
+
+.catalog-cards__link-buy{
+  position: relative;
+  width: 141px;
+  padding-left: 25px;
+  font-size: 14px;
+  line-height: 1.17;
+
+  &::before{
+    position: absolute;
+    content: url("../../img/basket.svg");
+    width: 20px;
+    height: 16px;
+    left: 20px;
+    fill: bootstrap.$base-white;
+  }
+}

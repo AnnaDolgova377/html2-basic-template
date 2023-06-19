@@ -1,0 +1,15 @@
+@use "../global/bootstrap.scss";
+
+.footer-location {
+  background-color: bootstrap.$base-grey;
+
+}
+
+.footer-location__image {
+  display: none;
+}
+
+.footer-location__map {
+  margin: 0 auto;
+  height: 420px;
+}
