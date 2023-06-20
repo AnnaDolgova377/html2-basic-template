@@ -1,12 +1,18 @@
 @use "../global/bootstrap.scss";
 
-.header{
-  @media (min-width: bootstrap.$tablet-width){
+.header {
+  @media (min-width: bootstrap.$tablet-width) {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 82px 1fr;
     column-gap: 67px;
     width: 728px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 1360px;
+    grid-template-columns: 320px 1fr;
+    column-gap: 162px;
   }
 }
 
@@ -20,12 +26,13 @@
     width: 82px;
   }
 
-  // @media (min-width: bootstrap.$desktop-width) {
-  //   width: 1360px;
-  // }
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 320px;
+  }
 }
 
 .header__logo {
+  @include bootstrap.link(bootstrap.$base-black, bootstrap.$base-white);
   @include bootstrap.offset-sides-y(12px, 12px);
   width: 32px;
   height: 36px;
@@ -41,10 +48,13 @@
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(22px, 22px);
     width: 82px;
-  }
 
-  @media (min-width: bootstrap.$desktop-width) {
-    width: 170px;
+    @media (min-width: bootstrap.$desktop-width) {
+      width: 320px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }
 
@@ -53,5 +63,11 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     display: block;
+    width: 126px;
+    font-family: bootstrap.$base-family;
+    font-weight: bootstrap.$regular;
+    font-size: 12px;
+    line-height: 1.09;
+    color: bootstrap.$base-black;
   }
 }

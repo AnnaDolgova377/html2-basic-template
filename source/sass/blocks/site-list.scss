@@ -38,7 +38,7 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(32px, 32px);
+    @include bootstrap.offset-sides-y(34px, 34px);
     @include bootstrap.offset-sides-x(20px, 20px);
 
     &::before {
@@ -59,13 +59,17 @@
         content: "";
       }
     }
+
+    &:active {
+      color: bootstrap.$base-primary;
+    }
   }
 }
 
 .site-list__item:last-child {
   border-bottom: 1px solid bootstrap.$base-secondary;
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     border-bottom: none;
   }
 }

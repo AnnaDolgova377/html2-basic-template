@@ -1,5 +1,6 @@
 let nav = document.querySelector('.navigation');
 let navToogle = document.querySelector('.navigation__toggle');
+let localMap = document.querySelector('.footer-location__wrapper');
 
 nav.classList.remove('navigation--nojs');
 
@@ -27,6 +28,8 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+localMap.classList.remove('footer-address__wrapper-location--nojs');
 
 let map = L.map('map').setView([59.968137, 30.316272], 20);
 

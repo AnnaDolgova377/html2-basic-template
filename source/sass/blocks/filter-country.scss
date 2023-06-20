@@ -1,12 +1,17 @@
 @use "../global/bootstrap.scss";
 
 
-.filter-country__list{
+.filter-country__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   padding-bottom: 30px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-bottom: 40px;
+  }
 }
+
 .filter-country__item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -21,7 +26,7 @@
   cursor: pointer;
 
   &:hover .filter-country__mark,
-  &:focus .filter-country__mark{
+  &:focus .filter-country__mark {
     background-color: rgba(bootstrap.$base-primary, 0.25);
     border: 2px solid bootstrap.$primary-lighter;
   }
@@ -38,7 +43,7 @@
   border-radius: 12px;
   transition: background-color 0.25s ease;
 
-  &::before{
+  &::before {
     position: absolute;
     content: "";
     left: 0;
@@ -57,7 +62,7 @@
   color: bootstrap.$base-black;
 }
 
-.filter-country__field:checked+.filter-country__mark {
+.filter-country__field:checked + .filter-country__mark {
   border: 2px solid bootstrap.$base-primary;
   background-color: bootstrap.$base-primary;
 
@@ -66,16 +71,16 @@
   }
 }
 
-.filter-country__field:disabled+.filter-country__mark {
+.filter-country__field:disabled + .filter-country__mark {
   border: 2px solid bootstrap.$light-grey;
   background-color: bootstrap.$light-grey;
 }
 
-.filter-country__field:disabled:checked+.filter-country__mark::before {
+.filter-country__field:disabled:checked + .filter-country__mark::before {
   left: 18px;
   background-color: bootstrap.$base-grey;
 }
 
-.filter-country__field:disabled~.filter-country__mark-label {
+.filter-country__field:disabled ~ .filter-country__mark-label {
   color: bootstrap.$base-grey;
 }

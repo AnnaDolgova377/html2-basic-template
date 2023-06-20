@@ -1,9 +1,25 @@
 @use "../global/bootstrap.scss";
 
-.footer__content{
+.footer__content {
   @include bootstrap.offset-sides-y(20px, 20px);
   margin: 0 auto;
   width: 280px;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(42px, 32px);
+    width: 728px;
+  }
+}
+
+.footer__content-media {
+  @media (min-width: bootstrap.$tablet-width) {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 728px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
 }

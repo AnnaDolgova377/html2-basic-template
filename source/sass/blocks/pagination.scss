@@ -5,13 +5,18 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 728px;
+    justify-content: flex-end;
+  }
 }
 
 .pagination__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.pagination__link{
+.pagination__link {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -29,12 +34,26 @@
   border-radius: 4px;
   text-decoration: none;
 
-  &--current{
+  &--current {
     font-weight: bootstrap.$semi-bold;
     color: bootstrap.$base-black;
   }
+
+  &:hover,
+  &:focus {
+    background-color: bootstrap.$base-primary;
+    color: bootstrap.$base-white;
+  }
+
+  &:active {
+    background-color: bootstrap.$primary-darker;
+  }
+
+  &:disabled {
+    background-color: bootstrap.$light-grey;
+  }
 }
 
-.pagination__icon-next{
+.pagination__icon-next {
   transform: rotate(180deg);
 }

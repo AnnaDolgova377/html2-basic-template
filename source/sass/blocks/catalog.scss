@@ -1,13 +1,18 @@
 @use "../global/bootstrap.scss";
 
-.catalog{
+.catalog {
   background-color: bootstrap.$lightest-grey;
 }
 
-.catalog__wrapper{
+.catalog__wrapper {
   @include bootstrap.offset-sides-y(50px, 44px);
   margin: 0 auto;
   width: 280px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(80px, 90px);
+    width: 728px;
+  }
 }
 
 .catalog__badge {
@@ -21,7 +26,7 @@
   text-align: center;
 }
 
-.catalog__title{
+.catalog__title {
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$bold;
   font-size: 24px;
@@ -29,14 +34,34 @@
   color: bootstrap.$base-black;
   text-align: center;
   padding-bottom: 20px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 42px;
+    line-height: 1.25;
+  }
 }
 
-.catalog__submit-button{
+.catalog__button-wrapper {
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: space-between;
+    width: 277px;
+    margin-bottom: 44px;
+  }
+}
+
+.catalog__submit-button {
   width: 280px;
   margin-bottom: 20px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 137px;
+    margin-bottom: 0;
+  }
 }
 
-.catalog__reset-button{
+.catalog__reset-button {
   width: 280px;
   background-color: bootstrap.$base-white;
   color: bootstrap.$base-primary;
@@ -44,12 +69,17 @@
 
   &:hover,
   &:focus,
-  &:active{
+  &:active {
     color: bootstrap.$base-white;
   }
 
-  &:disabled{
+  &:disabled {
     color: bootstrap.$base-white;
     background-color: bootstrap.$light-grey;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 120px;
+    margin-bottom: 0;
   }
 }

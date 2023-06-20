@@ -4,6 +4,11 @@
   margin: 0 auto;
   padding-bottom: 40px;
   width: 280px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-bottom: 70px;
+    width: 728px;
+  }
 }
 
 .catalog-cards__list {
@@ -12,6 +17,11 @@
   display: grid;
   gap: 20px;
   background-color: bootstrap.$base-white;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 }
 
 .catalog-cards__item {
@@ -21,21 +31,30 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(50px, 30px);
+    @include bootstrap.offset-sides-x(30px, 30px);
+  }
 }
 
-.catalog-cards__wrapper-image{
+.catalog-cards__wrapper-image {
   display: flex;
   justify-self: center;
   align-self: center;
   margin-bottom: 24px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .catalog-cards__link-img,
-.catalog-cards__link{
+.catalog-cards__link {
   @include bootstrap.link(bootstrap.$base-black, bootstrap.$base-white);
 }
 
-.catalog-cards__title{
+.catalog-cards__title {
   margin: 0;
   margin-bottom: 4px;
   font-family: bootstrap.$base-family;
@@ -43,20 +62,30 @@
   font-size: 18px;
   line-height: 1.46;
   color: bootstrap.$base-black;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 1.23;
+  }
 }
 
-.catalog-cards__description{
+.catalog-cards__description {
   margin: 0;
   margin-bottom: 16px;
   font-family: inherit;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
-.catalog-cards__buy{
+.catalog-cards__buy {
   display: flex;
   justify-content: space-between;
 }
 
-.catalog-cards__price{
+.catalog-cards__price {
   margin: 0;
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$semi-bold;
@@ -65,14 +94,14 @@
   color: bootstrap.$base-black;
 }
 
-.catalog-cards__link-buy{
+.catalog-cards__link-buy {
   position: relative;
   width: 141px;
   padding-left: 25px;
   font-size: 14px;
   line-height: 1.17;
 
-  &::before{
+  &::before {
     position: absolute;
     content: url("../../img/basket.svg");
     width: 20px;

@@ -18,4 +18,25 @@
   margin: 0;
   min-width: 40px;
   min-height: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: bootstrap.$base-secondary;
+
+    & .footer-social__icon {
+      fill: bootstrap.$base-primary;
+    }
+  }
+
+  &:active {
+    background-color: rgba(bootstrap.$base-primary, 0.25);
+
+    & .footer-social__icon {
+      fill: bootstrap.$base-primary;
+    }
+  }
+}
+
+.footer-social__icon {
+  fill: bootstrap.$base-grey;
 }

@@ -1,5 +1,11 @@
 @use "../global/bootstrap.scss";
 
+.filter-milk {
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-left: 30px;
+  }
+}
+
 .filter-milk__list {
   margin: 0;
   padding: 0;
@@ -25,7 +31,7 @@
     border: 2px solid bootstrap.$primary-lighter;
 
     &::before {
-      background-color: rgba(bootstrap.$base-primary, 0.25)
+      background-color: rgba(bootstrap.$base-primary, 0.25);
     }
   }
 }
@@ -59,7 +65,7 @@
   color: bootstrap.$base-black;
 }
 
-.filter-milk__field:checked+.filter-milk__mark {
+.filter-milk__field:checked + .filter-milk__mark {
   border: 2px solid bootstrap.$primary-lighter;
 
   &::before {
@@ -67,14 +73,14 @@
   }
 }
 
-.filter-milk__field:disabled+.filter-milk__mark {
+.filter-milk__field:disabled + .filter-milk__mark {
   border: 2px solid bootstrap.$light-grey;
 }
 
-.filter-milk__field:disabled:checked+.filter-milk__mark::before {
+.filter-milk__field:disabled:checked + .filter-milk__mark::before {
   background-color: bootstrap.$light-grey;
 }
 
-.filter-milk__field:disabled~.filter-milk__mark-label {
+.filter-milk__field:disabled ~ .filter-milk__mark-label {
   color: bootstrap.$base-grey;
 }

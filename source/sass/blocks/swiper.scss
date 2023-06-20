@@ -2,30 +2,54 @@
 
 .swiper {
   background-color: bootstrap.$flat-white;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    background: linear-gradient(to bottom, bootstrap.$flat-white 70%, bootstrap.$base-white 70%);
+  }
 }
 
 .swiper-pagination {
   display: none;
+
+  @media (min-width: bootstrap.$desktop-width) {
+    display: block;
+  }
 }
 
 .swiper-button-prev {
   left: 0;
+  top: 318px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    left: 30px;
+    top: 310px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    top: 347px;
+  }
 }
 
 .swiper-button-next {
   right: 0;
+  top: 318px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    right: 30px;
+    top: 310px;
+  }
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
   color: bootstrap.$base-primary;
-  font-size: 11px;
+  font-size: 20px;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
   &:hover::after,
-  &:focus::after{
+  &:focus::after {
     color: bootstrap.$base-primary;
   }
 

@@ -83,9 +83,13 @@
 
 .navigation__wrapper {
   @media (min-width: bootstrap.$tablet-width) {
-    width: 580px;
     display: flex;
     justify-content: space-between;
+    gap: 60px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    gap: 162px;
   }
 }
 
@@ -100,7 +104,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 400px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    gap: 20px;
   }
 }
 

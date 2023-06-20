@@ -1,8 +1,7 @@
 @use "../global/bootstrap.scss";
 
-.footer-location {
+.footer__location {
   background-color: bootstrap.$base-grey;
-
 }
 
 .footer-location__image {
@@ -12,4 +11,13 @@
 .footer-location__map {
   margin: 0 auto;
   height: 420px;
+}
+
+.footer-location__wrapper--nojs .footer-location__map {
+  display: none;
+}
+
+.footer-location__wrapper--nojs .footer-location__image {
+  display: block;
+  width: 100%;
 }

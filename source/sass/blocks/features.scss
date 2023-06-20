@@ -5,6 +5,11 @@
   margin: 0 auto;
   width: 280px;
   text-align: center;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(60px, 100px);
+    width: 708px;
+  }
 }
 
 .features__badge {
@@ -25,6 +30,12 @@
   font-size: 24px;
   line-height: 1.23;
   color: bootstrap.$base-black;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-bottom: 60px;
+    font-size: 42px;
+    line-height: 1.25;
+  }
 }
 
 .features__list {
@@ -32,6 +43,20 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: grid;
+    grid-template-columns: 318px 318px;
+    column-gap: 60px;
+    row-gap: 50px;
+  }
+}
+
+.features__item {
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-left: 72px;
+    text-align: left;
+  }
 }
 
 .feature__title {
@@ -68,8 +93,19 @@
   &--eco::before {
     content: url("../../img/leaf.svg");
   }
-}
 
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(0, 10px);
+    font-size: 24px;
+    line-height: 1.23;
+
+    &::before {
+      top: 0;
+      left: -72px;
+      transform: none;
+    }
+  }
+}
 
 .feature__description {
   margin: 0;

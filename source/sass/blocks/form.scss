@@ -1,5 +1,13 @@
 @use "../global/bootstrap.scss";
 
+.form {
+  @media (min-width: bootstrap.$tablet-width) {
+    display: grid;
+    grid-template-columns: 223px auto 223px;
+    justify-content: space-between;
+  }
+}
+
 .form__filter-price,
 .form__filter-milk,
 .form__filter-country {

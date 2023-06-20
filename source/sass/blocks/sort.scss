@@ -1,12 +1,17 @@
 @use "../global/bootstrap.scss";
 
-.sort{
+.sort {
   display: flex;
   justify-content: space-between;
   width: 280px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 728px;
+    justify-content: flex-end;
+  }
 }
 
-.sort__caption{
+.sort__caption {
   @include bootstrap.offset-sides-y(4px, 20px);
   margin: 0;
   font-family: bootstrap.$base-family;
@@ -39,15 +44,12 @@
   appearance: none;
 
   &:hover,
-  &:focus{
+  &:focus {
     background-color: bootstrap.$base-secondary;
   }
 
-  &:active{
+  &:active {
     border: none;
     background-color: bootstrap.$base-white;
   }
 }
-
-
-

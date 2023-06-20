@@ -1,10 +1,11 @@
 @use "../global/bootstrap.scss";
 
-.footer-contacts{
+.footer-contacts {
+  @include bootstrap.offset-sides-y(20px, 20px);
+  @include bootstrap.offset-sides-y(20px, 20px);
   position: relative;
-  padding: 20px;
 
-  &::before{
+  &::before {
     position: absolute;
     content: "";
     top: 0;
@@ -13,14 +14,26 @@
     height: 1px;
     background-color: bootstrap.$base-secondary;
   }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
-.footer-contacts__wrapper{
+.footer-contacts__wrapper {
   margin: 0 auto;
   width: 280px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 223px;
+  }
 }
 
-.footer-contacts__title{
+.footer-contacts__title {
   margin: 0;
   margin-bottom: 12px;
   font-family: bootstrap.$base-family;
@@ -30,13 +43,13 @@
   color: bootstrap.$base-primary;
 }
 
-.footer-contacts__address-phone{
+.footer-contacts__address-phone {
   display: grid;
   grid-template-columns: 20px 1fr;
   row-gap: 16px;
 }
 
-.footer-contacts__address-text{
+.footer-contacts__address-text {
   margin: 0;
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$regular;
@@ -44,15 +57,23 @@
   line-height: 1.17;
   font-style: normal;
   color: bootstrap.$base-black;
-  text-decoration: none
+  text-decoration: none;
 }
 
-.footer-contacts__phone{
+.footer-contacts__phone {
   font-family: bootstrap.$base-family;
   font-weight: bootstrap.$regular;
   font-size: 14px;
   line-height: 1.17;
   font-style: normal;
   color: bootstrap.$base-black;
-  text-decoration: none
+  text-decoration: none;
+}
+
+.footer-contacts__icon-address {
+  fill: bootstrap.$base-primary;
+}
+
+.footer-contacts__icon-phone {
+  fill: bootstrap.$base-primary;
 }

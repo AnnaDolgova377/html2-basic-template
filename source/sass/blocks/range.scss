@@ -12,6 +12,10 @@
   width: 241px;
   height: 4px;
   background-color: bootstrap.$primary-lighter;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 192px;
+  }
 }
 
 .range-price__toggle {
@@ -23,7 +27,7 @@
   border: 2px solid bootstrap.$primary-lighter;
   cursor: pointer;
 
-  &::before{
+  &::before {
     position: absolute;
     content: "";
     top: 2px;
@@ -35,11 +39,11 @@
   }
 
   &:hover::before,
-  &:focus::before{
-    background-color: rgba(bootstrap.$base-primary, 0.25)
+  &:focus::before {
+    background-color: rgba(bootstrap.$base-primary, 0.25);
   }
 
-  &:active::before{
+  &:active::before {
     background-color: bootstrap.$base-primary;
   }
 
@@ -47,7 +51,7 @@
     border: 2px solid bootstrap.$base-grey;
   }
 
-  &:disabled+.range-price__bar{
+  &:disabled + .range-price__bar {
     background-color: bootstrap.$base-grey;
   }
 }
@@ -66,6 +70,10 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(30px, 30px);
+  }
 }
 
 .range-price__input {
@@ -95,6 +103,10 @@
   &:disabled {
     outline: 2px solid bootstrap.$light-grey;
   }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 87px;
+  }
 }
 
 .range-price__label-min {
@@ -108,5 +120,11 @@
     background-color: bootstrap.$base-grey;
     right: -25px;
     bottom: 18px;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    &::after {
+      right: -28px;
+    }
   }
 }

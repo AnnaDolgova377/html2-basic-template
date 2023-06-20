@@ -6,6 +6,25 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-y(30px, 60px);
+    flex-direction: row;
+    padding-left: 25px;
+    gap: 30px;
+    text-align: left;
+  }
+}
+
+.slide__content {
+  @media (min-width: bootstrap.$tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    order: 2;
+    width: 625px;
+  }
 }
 
 .slide__badge {
@@ -16,6 +35,15 @@
   line-height: 1.09;
   color: bootstrap.$base-primary;
   text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 180px;
+    padding-left: 80px;
+  }
 }
 
 .slide__title {
@@ -27,6 +55,17 @@
   line-height: 1.09;
   color: bootstrap.$base-black;
   padding-bottom: 10px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-x(80px, 80px);
+    font-size: 56px;
+    line-height: 1.17;
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(0, 80px);
+  }
 }
 
 .slide__description {
@@ -38,12 +77,32 @@
   line-height: 1.17;
   color: bootstrap.$base-black;
   padding-bottom: 20px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-x(80px, 80px);
+    font-size: 20px;
+    line-height: 1.31;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(0, 76px);
+    padding-bottom: 40px;
+  }
 }
 
 .slide__wrapper-buy {
   @include bootstrap.offset-sides-x(20px, 20px);
   display: flex;
   justify-content: center;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-x(80px, 80px);
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    justify-content: start;
+  }
 }
 
 .slide__del-price {

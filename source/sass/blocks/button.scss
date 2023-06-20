@@ -1,8 +1,8 @@
 @use "../global/bootstrap.scss";
 
 .button {
-  box-sizing: border-box;
   @include bootstrap.offset-sides-y(8px, 8px);
+  box-sizing: border-box;
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -27,5 +27,4 @@
   &:active {
     background-color: bootstrap.$primary-darker;
   }
-
 }
